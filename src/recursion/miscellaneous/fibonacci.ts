@@ -6,3 +6,5 @@ const fibonacci = (number: number): number => {
 }
 
 export default fibonacci
+
+// fib(3) = fib(2) + fib(1) = 2

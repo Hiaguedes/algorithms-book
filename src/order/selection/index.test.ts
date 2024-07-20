@@ -8,7 +8,7 @@ describe('selection order', () => {
     ];
 
     for (const [arr, result] of ascendantCases) {
-        it(`should order by ascendant order correctly: ${arr} -> ${result}`, () => {
+        it(`should order by ascendant order correctly: [${arr}] -> [${result}]`, () => {
             expect(selectionOrder(arr, OrdenationEnum.ASC)).toEqual(result)
         })
     }
@@ -19,7 +19,7 @@ describe('selection order', () => {
     ];
 
     for (const [arr, result] of descendantCases) {
-        it(`should order by ascendant order correctly: ${arr} -> ${result}`, () => {
+        it(`should order by ascendant order correctly: [${arr}] -> [${result}]`, () => {
             expect(selectionOrder(arr, OrdenationEnum.DESC)).toEqual(result)
         })
     }

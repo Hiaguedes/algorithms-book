@@ -32,3 +32,10 @@ Usando:
 - Voce sabe mas recursividade tem o caso recursivo q e pra chamar a si mesmo caso esse caso seja verdadeiro e o caso base pra quebrar a recursividade  
 
 - A recursividade implica em empilhar mais funcoes na pilha de chamadas, uma forma de minimizar isso e usando recursao de cauda.
+
+- Em programacao funcional existem linguagen que nao tem lacos de repeticao como o haskell e nela voce faria uma funcao de somatoria da seguinte forma
+
+```hs
+    soma [] = 0
+    soma(x:xs) = x + (soma xs)
+```
