@@ -2,6 +2,10 @@
 
 - Seguindo o livro "Entendendo algoritmos"
 
+Usando:
+
+[![TypeScript](https://badgen.net/badge/icon/typescript?icon=typescript&label)](https://typescriptlang.org)
+
 ## Anotacoes
 
 
