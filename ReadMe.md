@@ -43,3 +43,9 @@ Usando:
 ### Hash Table
 
 - O seu amigo pra fazer pesquisa com complexidade O(1) pois sabe tudo que voce perguntar a ele
+
+- Elas sao otimas pra quando voce deseja mapear algum item com relacao a outro e voce precisa pesquisar algo
+
+- Uma aplicacao do mundo real e a de caching e memorizacao de dados, em vez de solicitar ao servidor toda vez
+
+- Praticamente toda linguagem tem uma forma integrada de hash table, entao voce nao precisa se preocupar em criar ela do zero, considerando colisoes e fator de carga mas caso queira saber mais a funcao SHA e uma boa funcao hash, ela cria de forma simetrica os hashs pra inserir no array
