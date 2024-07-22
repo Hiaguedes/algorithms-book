@@ -1,7 +1,8 @@
-export enum OrdenationEnum {
-    ASC = 'asc',
-    DESC = 'desc'
-}
+// Na pior situacao o quicksort tem tempo de execucao O(n^2), o tempo medio e de O(nlog2(n))
+
+import { OrdenationEnum } from "@src/lib/enums";
+
+export { OrdenationEnum }
 
 const quickSort = (arr: number[], ordenation: OrdenationEnum = OrdenationEnum.DESC): number[] => {
     if (arr.length < 2) return arr; // se arr esta vazio ou so tem um elemento ele esta ordenado

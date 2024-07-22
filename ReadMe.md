@@ -15,7 +15,7 @@ Usando:
 
 - A notacao big O leva sempre em consideracao o pior caso, ou seja se percorro um array de n posicoes e tenho o pior caso entao tenho n operacoes pra fazer, ou seja O(n)
 
-- Constantes sao ignorados na notacao, entao se uma notacao tem complexidade O(n^2 / 2) ou O(n^2 + 1) nao importa, no fim elas sao O(n^2)
+- Constantes sao ignorados na notacao, entao se uma notacao tem complexidade O(n^2 / 2) ou O(n^2 + 1) nao importa, no fim elas sao O(n^2), a notacao big O se preocupa mais quando existem uma quantidade massiva de dados a constante nao afeta tanto em comparacao com 4 bilhoes de dados
 
 ### Listas e arrays
 
@@ -39,3 +39,7 @@ Usando:
     soma [] = 0
     soma(x:xs) = x + (soma xs)
 ```
+
+### Hash Table
+
+- O seu amigo pra fazer pesquisa com complexidade O(1) pois sabe tudo que voce perguntar a ele

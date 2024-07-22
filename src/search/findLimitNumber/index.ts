@@ -1,9 +1,8 @@
 // a complexidade dele e de O(n^2)
 
-export enum OperationType {
-    MAX = 'max',
-    MIN = 'min'
-}
+import { OperationType } from "@src/lib/enums";
+
+export { OperationType }
 
 // complexidade O(n), ele faz a varredura do array inteiro em busca do menor ou do maior elemento
 const findLimitNumber = (arr: number[], operation: OperationType = OperationType.MIN) => {

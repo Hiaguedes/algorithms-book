@@ -2,12 +2,10 @@
 // Percorre uma vez a cada laco for pra pegar o menor ou maior valor e outra vez pra dar push no novo array
 // o quick sorte e menos custoso
 
+import { OrdenationEnum } from "@src/lib/enums";
 import findLimitNumber, { OperationType } from "@src/search/findLimitNumber";
 
-export enum OrdenationEnum {
-    ASC = 'asc',
-    DESC = 'desc'
-}
+export { OrdenationEnum }
 
 const selectionOrder = (arr: number[], ordenation: OrdenationEnum = OrdenationEnum.DESC) => {
     const newArr = [];
