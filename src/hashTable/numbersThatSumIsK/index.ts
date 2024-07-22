@@ -15,6 +15,4 @@ const numberThatSumIsK = (arr: number[], k: number) => {
     return { values: Array.from(results), numberOfCases: results.size }
 }
 
-console.log(numberThatSumIsK([0, 0, 0, 0], 1))
-
 export default numberThatSumIsK;

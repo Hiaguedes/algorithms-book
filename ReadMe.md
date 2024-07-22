@@ -49,3 +49,25 @@ Usando:
 - Uma aplicacao do mundo real e a de caching e memorizacao de dados, em vez de solicitar ao servidor toda vez
 
 - Praticamente toda linguagem tem uma forma integrada de hash table, entao voce nao precisa se preocupar em criar ela do zero, considerando colisoes e fator de carga mas caso queira saber mais a funcao SHA e uma boa funcao hash, ela cria de forma simetrica os hashs pra inserir no array
+
+### Pesquisa em largura e grafos
+
+- Usa grafos, uma famosa estrutura de dados, com ela posso calcular quantas edicoes posso fazer pra transformar uma palavra incorreta, a menor distancia entre voce e um medico no mapa, o menor numero de movimentos pra vencer numa partida de damas, o menor numero de etapas de um ponto a outro 
+
+- Cada grafo e constituido de vertices e arestas
+
+![Representacao dos grafos](assets/grafo.png)
+
+Eles sao maneiras de modelar como eventos estao conectados entre si
+
+- Pesquisas em largura voce normalmente faz duas perguntas
+
+1: Existe algum caminho do vertice a ate o vertice B?
+
+2: Qual o caminho minimo do vertice A ate o vertice B?
+
+- Exemplo: quero ver se conheco alguem que vende mangas. Primeiro faco uma lista de pessoas, primeiro vejo meus amigos e vejo se eles vendem mangas, se nao vou pra lista dos amigos dos amigos (a conexao), voce adiciona essas conexoes e vai vendo se alguem vende mangas, assim voce verifica toda sua rede.
+
+Os seus amigos sao conexao de primeiro grau, os amigos dos seus amigos de segundo grau, e por ai vai
+
+- Um grafo e dito digrafo se existe apenas um sentido de um sentido pra outro, ou seja ha apenas relacao de um vertice pra outro mas do outro pra voce nao existe, se existisse seria um grado direcionado
