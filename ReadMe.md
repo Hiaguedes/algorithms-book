@@ -71,3 +71,24 @@ Eles sao maneiras de modelar como eventos estao conectados entre si
 Os seus amigos sao conexao de primeiro grau, os amigos dos seus amigos de segundo grau, e por ai vai
 
 - Um grafo e dito digrafo se existe apenas um sentido de um sentido pra outro, ou seja ha apenas relacao de um vertice pra outro mas do outro pra voce nao existe, se existisse seria um grado direcionado
+
+
+### Algoritmo de Dijkstra
+
+- O intuito do algoritmo de dijkstra e de por exemplo fazer um algoritmo de pesquisa em largura onde os grafos agora tem um peso entre um e outro, nao necessariamente queremos encontrar o menor numero de segmentos mas sim oq leva menor tempo
+
+- O passo a passo pra se resolver uma questao dessas e
+
+1: Encontre o vertice mais barato, esse e o vertice em que voce consegue chegar no menor tempo possivel
+
+2: Atualize o custo dos vizinhos desse vertice, verificando se ha um caminho mais barato para os vizinhos desse vertice
+
+3: Repita ate que voce tenha feito isso pra cada vertice
+
+4: Calcule o caminho final
+
+- Um grafo com pesos e chamado de grafo ponderado ou grafo valorado
+
+- Um grado nao direcionado e um ciclo, o algoritmo de dikstra so funciona com graficos aciclicos dirigidos
+
+- Voce nao pode usar o algoritmo pra numeros negativos, existe um algoritmo especifico pra ele que e o Bellman-Ford
