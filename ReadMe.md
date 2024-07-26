@@ -92,3 +92,7 @@ Os seus amigos sao conexao de primeiro grau, os amigos dos seus amigos de segund
 - Um grado nao direcionado e um ciclo, o algoritmo de dikstra so funciona com graficos aciclicos dirigidos
 
 - Voce nao pode usar o algoritmo pra numeros negativos, existe um algoritmo especifico pra ele que e o Bellman-Ford
+
+Uma tentativa de explicar o algoritmo num caso real
+
+![Explicando o algoritmo de Djikstra](assets/djikstra.png)
