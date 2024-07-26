@@ -58,7 +58,21 @@ export default class BinarySearchTree {
     }
 
     search(key: number) {
+        return this.searchNode(this.root, key)
+    }
 
+    searchNode(node: BinaryTreeNode | null, key: number): BinaryTreeNode | null {
+        if (node === null) {
+            return null // caso base caso nao encontre um valor
+        }
+
+        if (this.compareFn(key, node.key) === Compare.LESS_THAN) { // vou fazendo a pesquisa a esquerda e a direita ate encontrar o no
+            return this.searchNode(node.left, key)
+        }
+        if (this.compareFn(key, node.key) === Compare.BIGGER_THAN) {
+            return this.searchNode(node.right, key)
+        }
+        return node // caso base caso encontro um no que seja igual a pesquisa
     }
 
     inOrderTraverse(callback?: (node: BinaryTreeNode) => void) {
@@ -97,9 +111,87 @@ export default class BinarySearchTree {
         }
     }
 
-    min() { }
-    max() { }
-    remove(key: number) { }
+    min(): BinaryTreeNode | null {
+        return this.minNode(this.root)
+    };
+
+    minNode(node: BinaryTreeNode | null): BinaryTreeNode | null {
+        // solucao com while
+        // let current = node;
+
+        // while (current !== null && current.left !== null) {
+        //     current = current.left;
+        // }
+
+        // return current
+
+        if (node !== null && node.left !== null) {
+            return this.minNode(node.left)
+        }
+
+        return node // caso base
+    }
+
+    max(): BinaryTreeNode | null {
+
+        return this.maxNode(this.root)
+    }
+
+    maxNode(node: BinaryTreeNode | null): BinaryTreeNode | null {
+
+        // solucao com while
+        // let current = node;
+
+        // while (current !== null && current.right !== null) {
+        //     current = current.right;
+        // }
+
+        // return current
+
+        if (node !== null && node.right !== null) {
+            return this.maxNode(node.right)
+        }
+
+        return node // caso base
+    }
+
+    remove(key: number) {
+        this.root = this.removeNode(this.root, key);
+    }
+
+    removeNode(node: BinaryTreeNode | null, key: number): null | BinaryTreeNode {
+        if (node === null) {
+            return null
+        }
+        if (this.compareFn(key, node.key) === Compare.LESS_THAN) {
+            node.left = this.removeNode(node.left, key)
+            return node
+        }
+
+        if (this.compareFn(key, node.key) === Compare.BIGGER_THAN) {
+            node.right = this.removeNode(node.right, key);
+            return node;
+        }
+        if (node.left === null && node.right === null) {
+            node = null;
+            return node;
+        }
+
+        if (node.left === null) {
+            node = node.right;
+            return node;
+        }
+
+        if (node.right === null) {
+            node = node.left;
+            return node
+        }
+
+        const aux = this.minNode(node.right);
+        node.key = aux?.key;
+        node.right = this.removeNode(node.right, aux?.key)
+        return node
+    }
 
 }
 
@@ -118,4 +210,16 @@ tree.preOrderTraverse((node) => console.log(`Temos o no de valor ${node.key} com
 console.log("post order traverse")
 tree.postOrderTraverse((node) => console.log(`Temos o no de valor ${node.key} com filho a esquerda de valor ${node.left?.key} e filho a direita de valor ${node.right?.key}`));
 
+
+console.log(`O valor minimo dessa arvore e ${tree.min()?.key}`)
+console.log(`O valor maximo dessa arvore e ${tree.max()?.key}`)
+
+const search = tree.search(9)
+console.log(`Como e o no de valor 9? key: ${search?.key}, left: ${search?.left?.key ?? search?.left}, right: ${search?.right?.key ?? search?.right}`)
 // console.log(tree)
+
+//teste de remocao do no 12
+
+tree.remove(12);
+tree.inOrderTraverse((node) => console.log(`Temos o no de valor ${node.key} com filho a esquerda de valor ${node.left?.key} e filho a direita de valor ${node.right?.key}`));
+
