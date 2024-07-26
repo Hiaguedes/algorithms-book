@@ -115,3 +115,21 @@ Uma arvore binaria tem no maximo dois filhos, um a esquerda e um a direita, ela 
 Um percurso em ordem visita todos os nos de uma BST em ordem crescente, o que significa que todos os nos serao visitados do menor pra o maior.
 
 Uma aplicacao do percurso em ordem seria ordenar uma arvore.
+
+![alt text](assets/in-order.png)
+
+##### Percurso pre ordem
+
+Um percurso pre ordem visita o no antes de visitar seus descendentes 
+
+Uma aplicacao seria exibir um documento estruturado
+
+![alt text](assets/pre-order.png)
+
+##### Percurso pos ordem
+
+Um percurso pos ordem visita o no depois de visitar seus descendentes 
+
+Uma aplicacao poderia ser calcular o espaco usado por um arquivo em um diretorio e em seus subdiretorios
+
+![alt text](assets/post-ordem.png)

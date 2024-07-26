@@ -73,8 +73,30 @@ export default class BinarySearchTree {
         }
     }
 
-    preOrderTraverse() { }
-    postOrderTraverse() { }
+    preOrderTraverse(callback?: (node: BinaryTreeNode) => void) {
+        this.preOrderTraverseFromRoot(this.root, callback)
+    }
+
+    preOrderTraverseFromRoot(node: BinaryTreeNode, callback?: (node: BinaryTreeNode) => void) {
+        if (node !== null) {
+            callback ? callback(node) : null; // aqui se visita o no raiz antes, ai seus valores a esquerda e direita, sendo que ele vai resolvendo os da esquerda primeiro
+            this.preOrderTraverseFromRoot(node.left, callback);
+            this.preOrderTraverseFromRoot(node.right, callback);
+        }
+    }
+
+    postOrderTraverse(callback?: (node: BinaryTreeNode) => void) {
+        this.postOrderTraverseFromRoot(this.root, callback)
+    }
+
+    postOrderTraverseFromRoot(node: BinaryTreeNode, callback?: (node: BinaryTreeNode) => void) {
+        if (node !== null) {
+            this.postOrderTraverseFromRoot(node.left, callback);
+            this.postOrderTraverseFromRoot(node.right, callback);
+            callback ? callback(node) : null; // aqui se visita o no raiz antes, ai seus valores a esquerda e direita, sendo que ele vai resolvendo os da esquerda primeiro
+        }
+    }
+
     min() { }
     max() { }
     remove(key: number) { }
@@ -85,8 +107,15 @@ const tree = new BinarySearchTree();
 
 tree.insert(10)
 tree.insert(9)
+tree.insert(6)
 tree.insert(11)
 tree.insert(12)
+
+console.log("In order traverse")
 tree.inOrderTraverse((node) => console.log(`Temos o no de valor ${node.key} com filho a esquerda de valor ${node.left?.key} e filho a direita de valor ${node.right?.key}`));
+console.log("pre order traverse")
+tree.preOrderTraverse((node) => console.log(`Temos o no de valor ${node.key} com filho a esquerda de valor ${node.left?.key} e filho a direita de valor ${node.right?.key}`));
+console.log("post order traverse")
+tree.postOrderTraverse((node) => console.log(`Temos o no de valor ${node.key} com filho a esquerda de valor ${node.left?.key} e filho a direita de valor ${node.right?.key}`));
 
 // console.log(tree)
