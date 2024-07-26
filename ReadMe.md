@@ -8,7 +8,6 @@ Usando:
 
 ## Anotacoes
 
-
 ### Notacao Big O
 
 - A notacao tem esse nome por que conta quantas operacoes foram feitas e nao o tempo de execucao, ja q o tempo depende do ciclo de maquina do processador, oq e diferente de um computador pra outro
@@ -96,3 +95,17 @@ Os seus amigos sao conexao de primeiro grau, os amigos dos seus amigos de segund
 Uma tentativa de explicar o algoritmo num caso real
 
 ![Explicando o algoritmo de Djikstra](assets/djikstra.png)
+
+### Arvores
+
+#### Terminologias
+
+![alt text](assets/arvore.png)
+
+O no 11 e o root da arvore e ele tem filhos (ou descendentes, 7 a esquerda e 15 a direita)
+
+uma arvore tem niveis, e o nivel mais externo (3,6,8, ...) sao chamados de nos externos, os niveis 1 e 2 sao nos internos, a altura de uma arvore corresponde a profundidade maxima dos nos, ou seja a altura dessa arvore e de 3
+
+#### Arvore binaria (BST)
+
+Uma arvore binaria tem no maximo dois filhos, um a esquerda e um a direita, ela armazena valores menores a esquerda e maiores a direita
