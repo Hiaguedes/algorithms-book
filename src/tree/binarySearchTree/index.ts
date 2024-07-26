@@ -61,7 +61,18 @@ export default class BinarySearchTree {
 
     }
 
-    inOrderTraverse() { }
+    inOrderTraverse(callback?: (node: BinaryTreeNode) => void) {
+        this.inOrderTraverseFromRoot(this.root, callback)
+    }
+
+    inOrderTraverseFromRoot(node: BinaryTreeNode | null, callback?: (node: BinaryTreeNode) => void) {
+        if (node !== null) { // caso base, onde pararemos a recursao
+            this.inOrderTraverseFromRoot(node.left, callback); // visitamos o no a esquerda e se tiver casos a esquerda eu vou colocando eles como prioridade
+            callback ? callback(node) : null; // quando resolvido eu executo a funcao de callback, se houver
+            this.inOrderTraverseFromRoot(node?.right, callback) // depois de resolver as pilhas da esquerda eu vejo as da direita
+        }
+    }
+
     preOrderTraverse() { }
     postOrderTraverse() { }
     min() { }
@@ -76,5 +87,6 @@ tree.insert(10)
 tree.insert(9)
 tree.insert(11)
 tree.insert(12)
+tree.inOrderTraverse((node) => console.log(`Temos o no de valor ${node.key} com filho a esquerda de valor ${node.left?.key} e filho a direita de valor ${node.right?.key}`));
 
-console.log(tree)
+// console.log(tree)

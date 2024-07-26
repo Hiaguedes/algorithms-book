@@ -109,3 +109,9 @@ uma arvore tem niveis, e o nivel mais externo (3,6,8, ...) sao chamados de nos e
 #### Arvore binaria (BST)
 
 Uma arvore binaria tem no maximo dois filhos, um a esquerda e um a direita, ela armazena valores menores a esquerda e maiores a direita
+
+##### Percurso em ordem 
+
+Um percurso em ordem visita todos os nos de uma BST em ordem crescente, o que significa que todos os nos serao visitados do menor pra o maior.
+
+Uma aplicacao do percurso em ordem seria ordenar uma arvore.
