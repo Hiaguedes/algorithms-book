@@ -133,3 +133,11 @@ Um percurso pos ordem visita o no depois de visitar seus descendentes
 Uma aplicacao poderia ser calcular o espaco usado por um arquivo em um diretorio e em seus subdiretorios
 
 ![alt text](assets/post-ordem.png)
+
+### Lista ligadas
+
+Uma lista ligada e uma lista ligado por ponteiros que apontam pro proximo elemento
+
+![alt text](/assets/linked-list.png)
+
+Uma vantagem de lista ligada e que posso acessar, adicionar e remover qualquer elemento da lista ligada instantaneamente O(1)
