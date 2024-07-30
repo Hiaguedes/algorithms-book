@@ -141,6 +141,18 @@ export class LinkedList<T> {
     getHead() {
         return this.head;
     }
+
+    reverse(): LinkedListNode<T> | undefined {
+        let current = this.head; // seto o current pra apontar pro head pra iterar sobre ele
+        let prev: LinkedListNode<T> | undefined = undefined // crio um prev que vai ser nossa lista invertida
+
+        while (current) { // enquanto tiver current
+            prev = new LinkedListNode(current.element, prev)
+            current = current.next // current passa a ser o proximo
+        }
+
+        return prev
+    }
 }
 
 const list = new LinkedList<number>();
@@ -153,4 +165,7 @@ console.log(list.length());
 console.log(list.getElementAt(1))
 console.log(list.getHead())
 list.remove(2)
+console.log(list.toString())
+
+console.log(list.reverse())
 console.log(list.toString())
