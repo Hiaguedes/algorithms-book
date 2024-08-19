@@ -147,7 +147,7 @@ export class LinkedList<T> {
         let prev: LinkedListNode<T> | undefined = undefined // crio um prev que vai ser nossa lista invertida
 
         while (current) { // enquanto tiver current
-            prev = new LinkedListNode(current.element, prev)
+            prev = new LinkedListNode(current.element, prev) // o prev passa a ser o atual, com o next sendo o anterior ou seja a lista original e [1, 3, null] -> primeiro prev (1, undefined) -> (3, 1, null)
             current = current.next // current passa a ser o proximo
         }
 

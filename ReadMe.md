@@ -141,3 +141,14 @@ Uma lista ligada e uma lista ligado por ponteiros que apontam pro proximo elemen
 ![alt text](/assets/linked-list.png)
 
 Uma vantagem de lista ligada e que posso acessar, adicionar e remover qualquer elemento da lista ligada instantaneamente O(1)
+
+### Programacao dinamica
+
+a programação dinâmica só funciona quando os seus subproblemas são discretos, ou seja, quando eles não são dependentes entre si.
+
+Toda solução de programação dinâmica envolve uma tabela. 
+
+• Os valores nas células são, geralmente, o que você está tentando otimizar. Para o problema da mochila, os valores nas células eram os valores dos itens. 
+
+• Cada célula é um subproblema, portanto, pense em como você pode dividi-lo em outros subproblemas, pois isso lhe ajudará a descobrir quais são os seus eixos.
+

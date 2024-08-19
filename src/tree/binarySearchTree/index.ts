@@ -223,3 +223,16 @@ console.log(`Como e o no de valor 9? key: ${search?.key}, left: ${search?.left?.
 tree.remove(12);
 tree.inOrderTraverse((node) => console.log(`Temos o no de valor ${node.key} com filho a esquerda de valor ${node.left?.key} e filho a direita de valor ${node.right?.key}`));
 
+
+/**
+ * Uma forma bacana de resolver a questao de pre ordem e da seguinte forma
+ * 
+ * function preorderTraversal(root: TreeNode | null): number[] {
+    if(root==null){
+        return []
+    }
+    return [root.val,...preorderTraversal(root.left), ...preorderTraversal(root.right)]
+    
+};
+ * 
+ */
