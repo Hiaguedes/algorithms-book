@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest",
-    "test:report": "vitest run --reporter=html && cp coverage/index.html public/test-report.html"
+    "test:report": "vitest run --reporter=html"
   },
   "author": "Hiago Guedes",
   "license": "ISC",
