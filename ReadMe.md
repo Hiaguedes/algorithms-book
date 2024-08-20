@@ -8,7 +8,7 @@ Usando:
 
 ## Test Report
 
-Esse projeto, usa o vitest pra testar o codigo, seu report atualizado pode ser visto [aqui](https://hiaguedes.github.io/algorithms-book/test-report/)
+Esse projeto, usa o vitest pra testar o codigo, seu report atualizado pode ser visto [aqui](https://hiaguedes.github.io/algorithms-book)
 
 ## Anotacoes
 
